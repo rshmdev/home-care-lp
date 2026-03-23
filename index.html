@@ -633,10 +633,11 @@
             });
 
             // Intersection Observer para Bottom Nav Ativa
-            const sections = document.querySelectorAll("section[id], div[id='inicio']");
+            const targetIds = ["inicio", "servicos", "contato"];
+            const sections = targetIds.map(id => document.getElementById(id)).filter(Boolean);
             const navLinks = document.querySelectorAll(".nav-btn[data-target]");
 
-            const observerOpts = { threshold: 0.2, rootMargin: "-20% 0px -40% 0px" };
+            const observerOpts = { threshold: 0.1, rootMargin: "-30% 0px -30% 0px" };
             const sectionObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -645,7 +646,7 @@
                             if (link.getAttribute("data-target") === currentId) {
                                 link.classList.remove("text-[#50606c]/60", "dark:text-[#c9dae7]/60");
                                 link.classList.add("bg-[#c9dae7]", "dark:bg-[#50606c]", "text-[#50606c]", "dark:text-white");
-                            } else {
+                            } else if (link.hasAttribute("data-target")) {
                                 link.classList.remove("bg-[#c9dae7]", "dark:bg-[#50606c]", "text-[#50606c]", "dark:text-white");
                                 link.classList.add("text-[#50606c]/60", "dark:text-[#c9dae7]/60");
                             }
