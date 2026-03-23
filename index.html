@@ -551,26 +551,26 @@
     </footer>
     <!-- BottomNavBar (Mobile Only) -->
     <nav
-        class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 md:hidden bg-white dark:bg-slate-900 border-t border-[#c3c7cb]/15 shadow-[0_-10px_30px_rgba(80,96,108,0.08)] z-50">
-        <a class="flex flex-col items-center justify-center bg-[#c9dae7] dark:bg-[#50606c] text-[#50606c] dark:text-white rounded-full px-5 py-2"
-            href="#inicio">
-            <span class="material-symbols-outlined">home</span>
-            <span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-wider">Início</span>
+        class="fixed bottom-0 left-0 w-full flex justify-around items-center px-2 pb-4 pt-2 md:hidden bg-white dark:bg-slate-900 border-t border-[#c3c7cb]/15 shadow-[0_-10px_30px_rgba(80,96,108,0.08)] z-50">
+        <a class="nav-btn flex flex-col items-center justify-center text-[#50606c]/60 dark:text-[#c9dae7]/60 hover:opacity-80 rounded-full px-4 py-1.5 transition-colors"
+            href="#inicio" data-target="inicio">
+            <span class="material-symbols-outlined text-2xl mb-0.5">home</span>
+            <span class="font-['Manrope'] text-[9px] font-bold uppercase tracking-wider">Início</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-[#50606c]/60 dark:text-[#c9dae7]/60 hover:opacity-80"
-            href="#servicos">
-            <span class="material-symbols-outlined">rebase_edit</span>
-            <span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-wider">Serviços</span>
+        <a class="nav-btn flex flex-col items-center justify-center text-[#50606c]/60 dark:text-[#c9dae7]/60 hover:opacity-80 rounded-full px-4 py-1.5 transition-colors"
+            href="#servicos" data-target="servicos">
+            <span class="material-symbols-outlined text-2xl mb-0.5">rebase_edit</span>
+            <span class="font-['Manrope'] text-[9px] font-bold uppercase tracking-wider">Serviços</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-[#50606c]/60 dark:text-[#c9dae7]/60 hover:opacity-80"
+        <a class="nav-btn flex flex-col items-center justify-center text-[#50606c]/60 dark:text-[#c9dae7]/60 hover:opacity-80 rounded-full px-4 py-1.5 transition-colors"
             href="https://wa.me/5521976192942?text=Olá, gostaria de agendar uma avaliação" target="_blank">
-            <span class="material-symbols-outlined">calendar_month</span>
-            <span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-wider">Agendar</span>
+            <span class="material-symbols-outlined text-2xl mb-0.5">calendar_month</span>
+            <span class="font-['Manrope'] text-[9px] font-bold uppercase tracking-wider">Agendar</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-[#50606c]/60 dark:text-[#c9dae7]/60 hover:opacity-80"
-            href="#contato">
-            <span class="material-symbols-outlined">chat</span>
-            <span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-wider">Contato</span>
+        <a class="nav-btn flex flex-col items-center justify-center text-[#50606c]/60 dark:text-[#c9dae7]/60 hover:opacity-80 rounded-full px-4 py-1.5 transition-colors"
+            href="#contato" data-target="contato">
+            <span class="material-symbols-outlined text-2xl mb-0.5">chat</span>
+            <span class="font-['Manrope'] text-[9px] font-bold uppercase tracking-wider">Contato</span>
         </a>
     </nav>
 
@@ -631,6 +631,30 @@
                     lastDesktopState = currentlyDesktop;
                 }
             });
+
+            // Intersection Observer para Bottom Nav Ativa
+            const sections = document.querySelectorAll("section[id], div[id='inicio']");
+            const navLinks = document.querySelectorAll(".nav-btn[data-target]");
+
+            const observerOpts = { threshold: 0.2, rootMargin: "-20% 0px -40% 0px" };
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const currentId = entry.target.id;
+                        navLinks.forEach(link => {
+                            if (link.getAttribute("data-target") === currentId) {
+                                link.classList.remove("text-[#50606c]/60", "dark:text-[#c9dae7]/60");
+                                link.classList.add("bg-[#c9dae7]", "dark:bg-[#50606c]", "text-[#50606c]", "dark:text-white");
+                            } else {
+                                link.classList.remove("bg-[#c9dae7]", "dark:bg-[#50606c]", "text-[#50606c]", "dark:text-white");
+                                link.classList.add("text-[#50606c]/60", "dark:text-[#c9dae7]/60");
+                            }
+                        });
+                    }
+                });
+            }, observerOpts);
+
+            sections.forEach(section => sectionObserver.observe(section));
         });
     </script>
 </body>
