@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="pt-BR">
 
@@ -161,7 +161,7 @@
 <body class="bg-surface font-body text-on-surface">
     <!-- TopNavBar -->
     <nav
-        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(80,96,108,0.06)]">
+        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_20px_40px_rgba(80,96,108,0.06)] border-b border-white/20 dark:border-white/10">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
             <span class="text-2xl font-bold text-[#50606c] dark:text-[#c9dae7] tracking-tighter font-headline">Dra.
                 Mariana</span>
@@ -181,7 +181,7 @@
             </div>
             <a href="https://wa.me/5521976192942?text=Olá, gostaria de agendar uma avaliação fisioterapêutica"
                 target="_blank"
-                class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline font-semibold text-sm hover:opacity-90 transition-all scale-95 active:scale-90 inline-block text-center">
+                class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline font-semibold text-sm hover:-translate-y-[1px] hover:shadow-[0_8px_16px_-6px_rgba(80,96,108,0.3)] transition-all active:scale-95 inline-block text-center">
                 Agende sua avaliação
             </a>
         </div>
@@ -190,19 +190,17 @@
     <div id="inicio" class="relative w-full lg:h-[400vh]">
         <section
             class="relative lg:sticky top-0 w-full min-h-[100dvh] lg:h-[100dvh] overflow-hidden px-6 flex items-center pt-20 lg:pt-1 pb-16 lg:pb-0">
-            <!-- Background Video apenas na direita -->
+            <!-- Background Video apenas no Desktop -->
             <div class="hidden lg:block absolute top-0 right-0 w-full lg:w-[55%] h-full -z-20">
                 <video id="hero-video" class="w-full h-full object-cover object-center" muted playsinline preload="auto"
                     autoplay loop>
                     <!-- Updated to use the re-encoded mp4 -->
                     <source src="hero_bg.mp4" type="video/mp4">
                 </video>
-                <!-- Fade lateral suave para mesclar com o fundo sólido (apenas Desktop) -->
+                <!-- Fade lateral suave para mesclar com o fundo sólido -->
                 <div
-                    class="hidden lg:block absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-surface to-transparent dark:from-slate-950 dark:to-transparent">
+                    class="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-surface to-transparent dark:from-slate-950 dark:to-transparent">
                 </div>
-                <!-- Overlay escurecedor para garantir leitura em Mobile -->
-                <div class="lg:hidden absolute inset-0 bg-surface/80 dark:bg-slate-950/80"></div>
             </div>
 
             <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10 mt-8">
@@ -211,7 +209,7 @@
                         class="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full text-xs font-bold uppercase tracking-widest font-label">Mariana
                         de Jesus de Assis - Fisioterapia Domiciliar</span>
                     <h1
-                        class="text-5xl md:text-7xl font-headline font-extrabold text-primary leading-[1.1] tracking-tight">
+                        class="text-5xl md:text-7xl font-headline font-extrabold text-primary leading-[1.1] tracking-tighter">
                         Recupere sua <span class="text-secondary">mobilidade</span> no conforto do seu lar.
                     </h1>
                     <p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
@@ -222,7 +220,7 @@
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="https://wa.me/5521976192942?text=Olá, gostaria de agendar uma avaliação fisioterapêutica"
                             target="_blank"
-                            class="bg-primary text-on-primary px-6 sm:px-8 py-4 rounded-full font-headline font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all inline-flex max-w-full items-center justify-center gap-2 group">
+                            class="bg-primary text-on-primary px-6 sm:px-8 py-4 rounded-full font-headline font-bold text-base sm:text-lg shadow-[0_12px_24px_-8px_rgba(80,96,108,0.3)] hover:shadow-[0_20px_40px_-12px_rgba(80,96,108,0.4)] hover:-translate-y-[2px] transition-all active:scale-[0.98] inline-flex max-w-full items-center justify-center gap-2 group">
                             <span class="text-center leading-tight">Agende sua avaliação</span>
                             <span
                                 class="material-symbols-outlined shrink-0 group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -230,12 +228,12 @@
                         <div class="flex items-center gap-4 px-4 py-2">
                             <div class="flex -space-x-3">
                                 <div
-                                    class="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high overflow-hidden">
+                                    class="w-10 h-10 rounded-full border-2 border-transparent ring-2 ring-white/50 bg-surface-container-high overflow-hidden">
                                     <img class="w-full h-full object-cover" data-alt="Rosto de paciente satisfeita"
                                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqMhkhZ_JNpO3gF2e0R0xnKbmL47277JdvU9Bdl62JgWyyW20EFstJzSX_EMkYNi-0BHHwjfOhHv6CYXOwZaCMpP1bE5BPflyvtHgIYj60olfN_46IvJrH67wzubGs6aCGn9Gjvxn97WJNZNjmMT03TwrLaBwSIebdYS_qjwk71qGv_4GuPcuE8hV5pUrC2KWaKVrQoPsu6uNumtbwmaLnnF1VsiteOtcTh5aOuzmffLQZfhh-apCjwHiksYW5-3DtBnN6Sb81Jl8" />
                                 </div>
                                 <div
-                                    class="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high overflow-hidden">
+                                    class="w-10 h-10 rounded-full border-2 border-transparent ring-2 ring-white/50 bg-surface-container-high overflow-hidden">
                                     <img class="w-full h-full object-cover" data-alt="Rosto de paciente idoso"
                                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1g_r5AIoq7DdeUskedO1l2Yv9MMuDJMHrmlG1lbGiT2prUddvSys87TmCtP1yPkuSq3b7Lp56uyXOSN2j61ceyPYM2Yh_88Rhh72XrN0D4DsKNqnrXMTW1Ex39xUs8mwVfTpIVD9g8Pc6xMuyOvTuHRdAvWCFMEZJ0yXXV2rs7drRccAbhAiKyz_mll1b-X_wse8POAFzi-OvTIGqhjjkftDyKZWGO8XSbMQHqrzamSjUr9_ehsHKTeW6mkTxPV9LMcjR3NscbzA" />
                                 </div>
@@ -256,17 +254,17 @@
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div class="order-2 md:order-1 relative">
                 <div
-                    class="aspect-square rounded-full overflow-hidden border-8 border-white shadow-xl max-w-md mx-auto">
+                    class="aspect-square rounded-full overflow-hidden border-8 border-white shadow-[0_24px_48px_-12px_rgba(0,0,0,0.08)] max-w-md mx-auto">
                     <img class="w-full h-full object-cover object-[50%_18%]"
                         data-alt="Foto profissional da fisioterapeuta sorrindo" src="assets/mariana-og.jpg" />
                 </div>
                 <div
-                    class="absolute top-1/2 -right-4 bg-primary text-on-primary p-4 rounded-lg transform -translate-y-1/2 hidden lg:block">
+                    class="absolute top-1/2 -right-4 bg-primary text-on-primary p-4 rounded-2xl shadow-[0_16px_32px_-8px_rgba(80,96,108,0.3)] backdrop-blur-md bg-primary/95 transform -translate-y-1/2 hidden lg:block">
                     <p class="text-sm font-bold">CREFITO 377614-F</p>
                 </div>
             </div>
             <div class="order-1 md:order-2 space-y-6">
-                <h2 class="text-4xl font-headline font-bold text-primary">Cuidado Especializado e Humanizado</h2>
+                <h2 class="text-4xl font-headline font-bold text-primary tracking-tight">Cuidado Especializado e Humanizado</h2>
                 <p class="text-on-surface-variant leading-relaxed">
                     Olá, eu sou Mariana. Acredito que a reabilitação acontece melhor onde você se sente mais
                     seguro: no seu lar. Com especialização em fisioterapia ortopédica e geriátrica, meu foco é devolver
@@ -301,54 +299,50 @@
     <section class="py-16 px-6" id="servicos">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 space-y-4">
-                <h2 class="text-4xl font-headline font-bold text-primary">Minhas Especialidades</h2>
+                <h2 class="text-4xl font-headline font-bold text-primary tracking-tight">Minhas Especialidades</h2>
                 <p class="text-on-surface-variant max-w-2xl mx-auto">Atendo tratamentos específicos para cada fase da
                     sua vida e necessidade de saúde.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Card 1 -->
                 <div
-                    class="bg-surface-container-lowest p-8 rounded-DEFAULT hover:shadow-xl transition-all group border border-transparent hover:border-primary-container">
+                    class="bg-surface-container-lowest p-8 rounded-3xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-all duration-300 group border border-transparent hover:border-primary-container">
                     <div
                         class="w-14 h-14 bg-primary-container rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-primary text-3xl">accessibility_new</span>
+                        <span class="material-symbols-outlined text-primary text-3xl">air</span>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Reabilitação Postural</h3>
-                    <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Correção de desvios, alívio de
-                        tensões e melhora da consciência corporal no dia a dia.</p>
+                    <h3 class="text-xl font-bold text-primary mb-3">Melhora da Respiração</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Ajuda para lidar com falta de ar e cansaço constante. Técnicas para você recuperar o fôlego e realizar suas atividades diárias melhor.</p>
                 </div>
                 <!-- Card 2 -->
                 <div
-                    class="bg-surface-container-lowest p-8 rounded-DEFAULT hover:shadow-xl transition-all group border border-transparent hover:border-primary-container">
+                    class="bg-surface-container-lowest p-8 rounded-3xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-all duration-300 group border border-transparent hover:border-primary-container">
                     <div
                         class="w-14 h-14 bg-secondary-container/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-secondary text-3xl">medical_services</span>
+                        <span class="material-symbols-outlined text-secondary text-3xl">healing</span>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Pós-Cirúrgico</h3>
-                    <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Acompanhamento intensivo para
-                        acelerar a cicatrização e retomar movimentos com segurança.</p>
+                    <h3 class="text-xl font-bold text-primary mb-3">Tratamento de Dores e Lesões</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Cuidado focado para você se movimentar sem dores nas juntas, nos músculos ou na coluna, além de recuperação forte após fraturas e cirurgias.</p>
                 </div>
                 <!-- Card 3 -->
                 <div
-                    class="bg-surface-container-lowest p-8 rounded-DEFAULT hover:shadow-xl transition-all group border border-transparent hover:border-primary-container">
+                    class="bg-surface-container-lowest p-8 rounded-3xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-all duration-300 group border border-transparent hover:border-primary-container">
                     <div
                         class="w-14 h-14 bg-tertiary-container/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-tertiary text-3xl">elderly</span>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Cuidado com Idosos</h3>
-                    <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Prevenção de quedas, fortalecimento
-                        muscular e manutenção da independência funcional.</p>
+                    <h3 class="text-xl font-bold text-primary mb-3">Força e Prevenção para Idosos</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Exercícios práticos para fortalecer o corpo, melhorar muito o equilíbrio e devolver a confiança para caminhar sem medo de quedas.</p>
                 </div>
                 <!-- Card 4 -->
                 <div
-                    class="bg-surface-container-lowest p-8 rounded-DEFAULT hover:shadow-xl transition-all group border border-transparent hover:border-primary-container">
+                    class="bg-surface-container-lowest p-8 rounded-3xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-all duration-300 group border border-transparent hover:border-primary-container">
                     <div
                         class="w-14 h-14 bg-primary-container/40 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-primary text-3xl">healing</span>
+                        <span class="material-symbols-outlined text-primary text-3xl">accessibility_new</span>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Alívio de Dores</h3>
-                    <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Tratamento focado em dores crônicas,
-                        hérnias de disco e desconfortos musculares persistentes.</p>
+                    <h3 class="text-xl font-bold text-primary mb-3">Recuperação após AVC</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Terapias precisas, no conforto do próprio lar, para resgatar a coordenação, os passos e os movimentos paralisados ou enfraquecidos.</p>
                 </div>
             </div>
         </div>
@@ -356,7 +350,7 @@
     <!-- How It Works Section -->
     <section class="py-20 bg-primary text-on-primary" id="como-funciona">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-headline font-bold text-center mb-16">Como funciona o atendimento?</h2>
+            <h2 class="text-4xl font-headline font-bold text-center mb-16 tracking-tight">Como funciona o atendimento?</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
                 <div class="hidden md:block absolute top-12 left-1/4 right-1/4 h-0.5 bg-on-primary/20"></div>
                 <div class="relative flex flex-col items-center text-center space-y-6">
@@ -412,7 +406,7 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 space-y-8">
-                    <h2 class="text-4xl font-headline font-bold text-primary">Por que escolher o atendimento domiciliar?
+                    <h2 class="text-4xl font-headline font-bold text-primary tracking-tight">Por que escolher o atendimento domiciliar?
                     </h2>
                     <div class="space-y-6">
                         <div class="flex gap-4 p-4 rounded-xl hover:bg-surface-container transition-colors">
@@ -447,19 +441,19 @@
     <!-- Testimonials Section -->
     <section class="py-20 bg-surface-container-low" id="depoimentos">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-headline font-bold text-primary text-center mb-5">Histórias reais de recuperação
+            <h2 class="text-4xl font-headline font-bold text-primary tracking-tight text-center mb-5">Histórias reais de recuperação
             </h2>
             <p class="text-center text-on-surface-variant max-w-3xl mx-auto mb-16">Relatos de pacientes atendidos em
                 fisioterapia domiciliar em Jacarepaguá e Zona Oeste, com foco em resultado no dia a dia.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm italic relative">
+                <div class="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-300 italic relative">
                     <span
                         class="material-symbols-outlined absolute -top-4 left-6 text-secondary/30 text-5xl">format_quote</span>
                     <p class="text-on-surface-variant mb-6 leading-relaxed">"Depois da cirurgia de quadril, eu estava
                         inseguro até para levantar da cama. Em poucas semanas de fisioterapia em casa, voltei a andar
                         com mais firmeza e confiança."</p>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+                        <div class="w-12 h-12 rounded-full ring-2 ring-white/50 bg-surface-variant overflow-hidden">
                             <img class="w-full h-full object-cover" data-alt="Foto do paciente Carlos Menezes"
                                 src="https://randomuser.me/api/portraits/men/54.jpg" />
                         </div>
@@ -469,14 +463,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm italic relative">
+                <div class="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-300 italic relative">
                     <span
                         class="material-symbols-outlined absolute -top-4 left-6 text-secondary/30 text-5xl">format_quote</span>
                     <p class="text-on-surface-variant mb-6 leading-relaxed">"Eu sentia dor lombar quase todo dia por
                         causa do trabalho. Com os exercícios e ajustes de rotina, consegui voltar a trabalhar sem aquela
                         dor constante."</p>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+                        <div class="w-12 h-12 rounded-full ring-2 ring-white/50 bg-surface-variant overflow-hidden">
                             <img class="w-full h-full object-cover" data-alt="Foto da paciente Patrícia Souza"
                                 src="https://randomuser.me/api/portraits/women/44.jpg" />
                         </div>
@@ -486,13 +480,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm italic relative">
+                <div class="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-300 italic relative">
                     <span
                         class="material-symbols-outlined absolute -top-4 left-6 text-secondary/30 text-5xl">format_quote</span>
                     <p class="text-on-surface-variant mb-6 leading-relaxed">"Minha mãe teve um AVC e a recuperação em
                         casa fez diferença. Hoje ela já consegue fazer atividades simples com muito mais autonomia."</p>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+                        <div class="w-12 h-12 rounded-full ring-2 ring-white/50 bg-surface-variant overflow-hidden">
                             <img class="w-full h-full object-cover" data-alt="Foto do familiar Rafael Lima"
                                 src="https://randomuser.me/api/portraits/men/32.jpg" />
                         </div>
@@ -507,13 +501,13 @@
     </section>
     <!-- CTA Section -->
     <section class="py-20 px-6">
-        <div class="max-w-5xl mx-auto bg-primary-container rounded-lg p-12 text-center space-y-8">
-            <h2 class="text-4xl font-headline font-bold text-primary">Pronto para começar sua jornada de saúde?</h2>
+        <div class="max-w-5xl mx-auto bg-primary-container rounded-3xl p-12 text-center space-y-8">
+            <h2 class="text-4xl font-headline font-bold text-primary tracking-tight">Pronto para começar sua jornada de saúde?</h2>
             <p class="text-lg text-primary/80 max-w-2xl mx-auto">Não deixe para amanhã a dor que você pode começar a
                 tratar hoje mesmo. Estou pronta para te ajudar.</p>
             <a href="https://wa.me/5521976192942?text=Olá, gostaria de falar sobre o atendimento domiciliar"
                 target="_blank"
-                class="bg-[#25D366] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-full font-headline font-bold text-lg sm:text-xl shadow-lg hover:scale-105 transition-all inline-flex max-w-full items-center justify-center gap-3 mx-auto">
+                class="bg-[#25D366] text-white px-6 sm:px-10 py-4 sm:py-5 rounded-full font-headline font-bold text-lg sm:text-xl shadow-[0_12px_24px_-8px_rgba(37,211,102,0.4)] hover:-translate-y-[2px] hover:shadow-[0_20px_40px_-12px_rgba(37,211,102,0.5)] transition-all duration-300 active:scale-[0.98] inline-flex max-w-full items-center justify-center gap-3 mx-auto">
                 <span class="material-symbols-outlined shrink-0">chat</span>
                 <span class="text-center leading-tight">Falar pelo WhatsApp agora</span>
             </a>
@@ -522,21 +516,20 @@
     <section class="py-16 px-6 bg-surface-container-low" id="seo-local">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12 space-y-4">
-                <h2 class="text-4xl font-headline font-bold text-primary">Fisioterapia Domiciliar em Jacarepaguá e Zona
+                <h2 class="text-4xl font-headline font-bold text-primary tracking-tight">Fisioterapia Domiciliar em Jacarepaguá e Zona
                     Oeste</h2>
                 <p class="text-on-surface-variant max-w-3xl mx-auto">Atendimento em domicílio com cobertura prioritária
                     para Taquara, Tanque, Pechincha, Freguesia, Praça Seca e Jacarepaguá.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+                <div class="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-300">
                     <h3 class="text-2xl font-bold text-primary mb-4">Bairros atendidos</h3>
                     <p class="text-on-surface-variant leading-relaxed">Taquara, Tanque, Pechincha, Freguesia, Praça Seca
                         e Jacarepaguá, com possibilidade de atendimento em outras áreas da Zona Oeste sob consulta.</p>
                 </div>
-                <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
-                    <h3 class="text-2xl font-bold text-primary mb-4">Especialidades oficiais</h3>
-                    <p class="text-on-surface-variant leading-relaxed">Fisioterapia Respiratória, Ortopedia, Geriatria,
-                        Neurológico e Reabilitação Pós-AVC.</p>
+                <div class="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Áreas de atuação</h3>
+                    <p class="text-on-surface-variant leading-relaxed">Problemas respiratórios, dores musculares e fraturas (ortopedia), cuidados na terceira idade (geriatria) e recuperação motora de casos neurológicos e AVC.</p>
                 </div>
             </div>
         </div>
@@ -544,34 +537,33 @@
     <section class="py-20 px-6 bg-surface-container-lowest" id="faq">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12 space-y-4">
-                <h2 class="text-4xl font-headline font-bold text-primary">Perguntas frequentes</h2>
+                <h2 class="text-4xl font-headline font-bold text-primary tracking-tight">Perguntas frequentes</h2>
                 <p class="text-on-surface-variant max-w-3xl mx-auto">As dúvidas mais comuns de quem busca fisioterapia
                     domiciliar em Jacarepaguá e Zona Oeste.</p>
             </div>
             <div class="space-y-4">
-                <details class="bg-surface-container p-6 rounded-xl border border-outline-variant/40">
+                <details class="bg-surface-container p-6 rounded-2xl border border-outline-variant/30 hover:shadow-[0_12px_24px_-10px_rgba(0,0,0,0.03)] transition-all duration-300">
                     <summary class="font-bold text-primary cursor-pointer">Atende Taquara, Tanque e Pechincha?</summary>
                     <p class="text-on-surface-variant mt-3">Sim. A cobertura inclui Taquara, Tanque, Pechincha,
                         Freguesia, Praça Seca e Jacarepaguá.</p>
                 </details>
-                <details class="bg-surface-container p-6 rounded-xl border border-outline-variant/40">
-                    <summary class="font-bold text-primary cursor-pointer">Quais especialidades estão disponíveis?
+                <details class="bg-surface-container p-6 rounded-2xl border border-outline-variant/30 hover:shadow-[0_12px_24px_-10px_rgba(0,0,0,0.03)] transition-all duration-300">
+                    <summary class="font-bold text-primary cursor-pointer">Quais tratamentos são oferecidos?
                     </summary>
-                    <p class="text-on-surface-variant mt-3">Fisioterapia Respiratória, Ortopedia, Geriatria, Neurológico
-                        e reabilitação pós-AVC.</p>
+                    <p class="text-on-surface-variant mt-3">Ajudo você com problemas para respirar (respiratória), dores e machucados no corpo (ortopédica), fortalecimento para idosos (geriatria), e na recuperação total dos movimentos, como após um derrame/AVC (neurológica).</p>
                 </details>
-                <details class="bg-surface-container p-6 rounded-xl border border-outline-variant/40">
+                <details class="bg-surface-container p-6 rounded-2xl border border-outline-variant/30 hover:shadow-[0_12px_24px_-10px_rgba(0,0,0,0.03)] transition-all duration-300">
                     <summary class="font-bold text-primary cursor-pointer">Quanto tempo dura cada sessão?</summary>
                     <p class="text-on-surface-variant mt-3">Em média de 45 a 60 minutos, variando conforme avaliação e
                         objetivo clínico.</p>
                 </details>
-                <details class="bg-surface-container p-6 rounded-xl border border-outline-variant/40">
+                <details class="bg-surface-container p-6 rounded-2xl border border-outline-variant/30 hover:shadow-[0_12px_24px_-10px_rgba(0,0,0,0.03)] transition-all duration-300">
                     <summary class="font-bold text-primary cursor-pointer">A fisioterapia domiciliar é indicada para
                         idosos?</summary>
                     <p class="text-on-surface-variant mt-3">Sim. O atendimento em casa é uma ótima opção para idosos,
                         por reduzir deslocamentos e facilitar continuidade do tratamento.</p>
                 </details>
-                <details class="bg-surface-container p-6 rounded-xl border border-outline-variant/40">
+                <details class="bg-surface-container p-6 rounded-2xl border border-outline-variant/30 hover:shadow-[0_12px_24px_-10px_rgba(0,0,0,0.03)] transition-all duration-300">
                     <summary class="font-bold text-primary cursor-pointer">Como faço para agendar?</summary>
                     <p class="text-on-surface-variant mt-3">Fale pelo WhatsApp para triagem inicial e definição da
                         avaliação domiciliar.</p>
@@ -583,7 +575,7 @@
     <section class="py-20 px-6 bg-surface-container" id="contato">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div class="space-y-12">
-                <h2 class="text-4xl font-headline font-bold text-primary">Informações de Contato</h2>
+                <h2 class="text-4xl font-headline font-bold text-primary tracking-tight">Informações de Contato</h2>
                 <div class="space-y-6">
                     <div class="flex items-center gap-6">
                         <div
@@ -607,7 +599,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-surface-container-lowest p-8 md:p-12 rounded-lg shadow-xl">
+            <div class="bg-surface-container-lowest p-8 md:p-12 rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]">
                 <h3 class="text-2xl font-bold text-primary mb-8">Envie uma mensagem</h3>
                 <form class="space-y-6">
                     <div class="space-y-2">
@@ -637,7 +629,7 @@
                             placeholder="Como posso te ajudar?" rows="4"></textarea>
                     </div>
                     <button
-                        class="w-full bg-primary text-on-primary py-4 rounded-full font-bold text-lg hover:opacity-90 transition-all">Enviar
+                        class="w-full bg-primary text-on-primary py-4 rounded-full font-bold text-lg shadow-[0_12px_24px_-8px_rgba(80,96,108,0.3)] hover:-translate-y-[2px] hover:shadow-[0_20px_40px_-12px_rgba(80,96,108,0.4)] transition-all duration-300 active:scale-[0.98]">Enviar
                         Solicitação</button>
                 </form>
             </div>
@@ -780,4 +772,3 @@
 </body>
 
 </html>
-
